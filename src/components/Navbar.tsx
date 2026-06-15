@@ -1,5 +1,5 @@
 import React from "react";
-import { Compass, FileCode2, Info } from "lucide-react";
+import { Compass, FileCode2 } from "lucide-react";
 
 interface NavbarProps {
   onScrollToSection: (sectionId: string) => void;
@@ -10,15 +10,15 @@ export default function Navbar({ onScrollToSection }: NavbarProps) {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FAF9F6]/85 backdrop-blur-md border-b border-brand-slate/5 transition-all duration-200">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-        <button 
-          onClick={() => onScrollToSection("hero")}
-          className="flex items-center gap-2.5 font-display text-lg font-bold tracking-tight text-brand-slate hover:opacity-85 transition-opacity"
-        >
-          <div className="w-6 h-6 rounded-md bg-brand-slate flex items-center justify-center text-brand-beige font-mono text-sm leading-none font-extrabold">
-            R
-          </div>
-          <span className="-ml-1.5">yos</span>
-        </button>
+		<button 
+		  onClick={() => onScrollToSection("hero")}
+		  className="flex items-center gap-1 font-display text-lg font-bold tracking-tight text-brand-slate hover:opacity-85 transition-opacity"
+		>
+		  <div className="w-6 h-6 rounded-md bg-brand-slate flex items-center justify-center text-brand-beige font-mono text-sm leading-none font-extrabold">
+			R
+		  </div>
+		  <span>yos</span>
+		</button>
 
         {/* Navigation links */}
         <div className="flex items-center gap-6 text-sm font-medium">
