@@ -17,7 +17,7 @@ export default function Navbar({ onScrollToSection }: NavbarProps) {
           <div className="w-6 h-6 rounded-md bg-brand-slate flex items-center justify-center text-brand-beige font-mono text-sm leading-none font-extrabold">
             R
           </div>
-          <span>RyOS</span>
+          <span className="-ml-1.5">yos</span>
         </button>
 
         {/* Navigation links */}
