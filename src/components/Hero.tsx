@@ -44,7 +44,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="text-base sm:text-lg md:text-xl text-brand-slate/70 max-w-2xl leading-relaxed mb-4"
         >
-          Ryos is a cognitive calibration layer. It helps models understand your preferences, context, and reasoning style automatically—without custom software or custom codebases.
+          Paste one file. Your AI learns how you think, what you need, and how you want answers—instantly, on any platform.
         </motion.p>
 
         {/* Supporting Message */}

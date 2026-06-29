@@ -1,5 +1,5 @@
 {
-  "name": "RyOS",
+  "name": "Ryos",
   "description": "A human-AI collaboration framework designed to reduce friction between human intent, AI execution, and reality.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
