@@ -13,6 +13,8 @@ import HowItWorks from "./components/HowItWorks";
 import Downloads from "./components/Downloads";
 import PhilosophyFuture from "./components/PhilosophyFuture";
 import Footer from "./components/Footer";
+import Cursor from "./components/Cursor";
+import Marquee from "./components/Marquee";
 
 export default function App() {
   // Simple functional smooth scroll helper
@@ -32,35 +34,30 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-brand-beige text-brand-slate selection:bg-brand-slate selection:text-brand-beige font-sans">
-      
-      {/* Top Fixed Header component */}
+      <Cursor />
+
       <Navbar onScrollToSection={handleScrollToSection} />
 
-      {/* Main Structural scroll content blocks */}
       <main className="relative">
-        {/* 1. Hero Block */}
         <Hero onScrollToSection={handleScrollToSection} />
 
-        {/* 2. Failure diagnostics details */}
+        <Marquee />
+
         <Problem />
 
-        {/* 3. Operational pipeline system illustration */}
         <PipelineVisualizer />
 
-        {/* 4. Memorable Mind experiment demo */}
+        <Marquee reverse speed={40} />
+
         <InteractiveDemo />
 
-        {/* 5. Instruction workflow integration */}
         <HowItWorks onScrollToSection={handleScrollToSection} />
 
-        {/* 6. Active code previews sandbox */}
         <Downloads />
 
-        {/* 7. Realistic horizon timelines */}
         <PhilosophyFuture />
       </main>
 
-      {/* Static Footer */}
       <Footer />
 
     </div>
