@@ -24,7 +24,7 @@ export default function InteractiveDemo() {
             Test Your Calibration Speed
           </h2>
           <p className="text-brand-slate/75 text-base sm:text-lg">
-            Let's examine how quickly the human mind closes a feedback loop with speculative assumptions—and how RyOS trains the LLM to resist them.
+            Let's examine how quickly the human mind closes a feedback loop with speculative assumptions—and how Ryos trains the LLM to resist them.
           </p>
         </div>
 
@@ -132,7 +132,7 @@ export default function InteractiveDemo() {
                   </p>
                   
                   <p className="text-brand-beige/70 text-xs sm:text-sm leading-relaxed max-w-2xl font-sans">
-                    When we attach immediately to our first hypothesis, we generate defensive responses and unnecessary operational drift. RyOS programs the LLM to systematically list and weight unseen variables before closing its logical conclusions. This keeps your collaboration clean, objective, and stable.
+                    When we attach immediately to our first hypothesis, we generate defensive responses and unnecessary operational drift. Ryos programs the LLM to systematically list and weight unseen variables before closing its logical conclusions. This keeps your collaboration clean, objective, and stable.
                   </p>
                 </div>
               </motion.div>

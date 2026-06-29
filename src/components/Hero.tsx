@@ -44,7 +44,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
           transition={{ duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
           className="text-base sm:text-lg md:text-xl text-brand-slate/70 max-w-2xl leading-relaxed mb-4"
         >
-          RyOS is a cognitive calibration layer. It helps models understand your preferences, context, and reasoning style automatically—without custom software or custom codebases.
+          Ryos is a cognitive calibration layer. It helps models understand your preferences, context, and reasoning style automatically—without custom software or custom codebases.
         </motion.p>
 
         {/* Supporting Message */}
@@ -101,7 +101,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
           <div className="space-y-4 font-mono text-[11px] sm:text-sm text-brand-slate/85">
             <div className="flex gap-4">
               <span className="text-brand-slate/30 shrink-0">01</span>
-              <span><span className="text-emerald-700"># Loaded:</span> RyOS Core Specification v8.2</span>
+              <span><span className="text-emerald-700"># Loaded:</span> Ryos Core Specification v8.2</span>
             </div>
             <div className="flex gap-4">
               <span className="text-brand-slate/30 shrink-0">02</span>
@@ -113,7 +113,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
             </div>
             <div className="flex gap-4">
               <span className="text-brand-slate/30 shrink-0">04</span>
-              <span>&gt; Core operating rule loaded: <span className="text-indigo-600 font-semibold italic">\"Recognize variables first, verify reality next, proceed without attachment.\"</span></span>
+              <span>&gt; Core operating rule loaded: <span className="text-indigo-600 font-semibold italic">\"Recognize, verify, don't attach, act clean.\"</span></span>
             </div>
           </div>
         </motion.div>

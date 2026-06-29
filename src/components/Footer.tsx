@@ -11,7 +11,7 @@ export default function Footer() {
             R
           </div>
           <span className="font-display font-semibold text-brand-slate tracking-tight">
-            RyOS Collaboration Framework
+            Ryos Collaboration Framework
           </span>
         </div>
 
@@ -26,7 +26,7 @@ export default function Footer() {
 
         {/* Simple year tag */}
         <div className="text-xs text-brand-slate/35 text-center">
-          &copy; {new Date().getFullYear()} RyOS Specification team. Open source.
+          &copy; {new Date().getFullYear()} Ryos Specification team. Open source.
         </div>
 
       </div>

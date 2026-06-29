@@ -56,7 +56,7 @@ export default function PhilosophyFuture() {
                 Designed for Low Cognitive Entropy
               </h2>
               <p className="text-brand-slate/75 text-sm sm:text-base leading-relaxed">
-                Rather than treating AI as a synthetic product to command, RyOS approaches collaboration as an overlapping memory interface.
+                Rather than treating AI as a synthetic product to command, Ryos approaches collaboration as an overlapping memory interface.
               </p>
             </div>
 

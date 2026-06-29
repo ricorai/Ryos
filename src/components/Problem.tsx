@@ -59,7 +59,7 @@ export default function Problem() {
                           <span className="font-bold">Failure Type:</span> {point.failureMode}
                         </div>
                         <div className="bg-emerald-950/40 p-2.5 rounded-lg border border-emerald-500/10 text-white font-sans">
-                          <span className="font-bold text-emerald-300 block mb-1">✓ The RyOS Solution:</span>
+                          <span className="font-bold text-emerald-300 block mb-1">✓ The Ryos Solution:</span>
                           {point.solution}
                         </div>
                       </div>
@@ -101,7 +101,7 @@ export default function Problem() {
                           <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
                           <div>
                             <span className="font-display font-bold text-emerald-900 text-sm block mb-1">
-                              How RyOS framework solves this
+                              How Ryos framework solves this
                             </span>
                             <span className="text-brand-slate/85 text-sm leading-relaxed block font-sans">
                               {currentPoint.solution}
@@ -115,7 +115,7 @@ export default function Problem() {
               ) : (
                 <div className="h-full flex flex-col justify-center items-center text-center text-brand-slate/40 py-12">
                   <Sparkles className="w-8 h-8 mb-3" />
-                  <p className="text-sm">Select a friction point on the left to see how RyOS restructures the interaction context.</p>
+                  <p className="text-sm">Select a friction point on the left to see how Ryos restructures the interaction context.</p>
                 </div>
               )}
             </div>

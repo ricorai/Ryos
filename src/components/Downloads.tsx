@@ -8,7 +8,7 @@ export default function Downloads() {
 
   const activeContent = activeTab === "core" ? RYOS_CORE_PROMPT : RYOS_CONFIG_TEMPLATE;
   const activeFileName = activeTab === "core" ? "ryos-core.md" : "ryos-config-template.md";
-  const activeTitle = activeTab === "core" ? "RyOS Core Prompt" : "Universal Config Template";
+  const activeTitle = activeTab === "core" ? "Ryos Core Prompt" : "Universal Config Template";
 
   // Function to copy text to clipboard
   const handleCopy = async () => {
@@ -72,7 +72,7 @@ export default function Downloads() {
                     : "text-brand-slate/60 hover:text-brand-slate"
                 }`}
               >
-                1. RyOS Core Prompts ({lines.length} lines)
+                1. Ryos Core Prompts ({lines.length} lines)
               </button>
               <button
                 onClick={() => {
@@ -150,7 +150,7 @@ export default function Downloads() {
           <Info className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
           <div className="text-xs sm:text-sm text-brand-slate/85 font-sans leading-relaxed">
             <span className="font-bold text-indigo-900 block mb-1">Applying the stack:</span>
-            Pasting both items together into Claude's "Custom Instructions", ChatGPT's "Custom Instructions", or as a permanent system prompt in the Gemini API platform immediately activates the RyOS schema context.
+            Paste both files into your AI's system prompt, custom instructions, or context window. That's it. No installation, no extensions. Ryos activates immediately on the next message.
           </div>
         </div>
 

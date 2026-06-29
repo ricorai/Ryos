@@ -9,7 +9,7 @@ export default function HowItWorks({ onScrollToSection }: HowItWorksProps) {
   const steps = [
     {
       icon: <Download className="w-5 h-5 text-indigo-600" />,
-      title: "1. Obtain RyOS Core",
+      title: "1. Obtain Ryos Core",
       description: "Grab the core specification holding alignment laws and cognitive governance rules. Select copying or save direct.",
       actionText: "Go to Core",
       targetId: "downloads"
@@ -31,7 +31,7 @@ export default function HowItWorks({ onScrollToSection }: HowItWorksProps) {
     {
       icon: <MessageSquare className="w-5 h-5 text-indigo-600" />,
       title: "4. Request \"Help me build...\"",
-      description: "Prompt the AI: 'Help me build my RyOS configuration'. The model will interview you to construct your personalized workflow parameters.",
+      description: "Prompt the AI: 'Help me build my Ryos configuration'. The model will interview you to construct your personalized workflow parameters.",
       actionText: "Try Experiment",
       targetId: "interactive-demo"
     }
@@ -50,7 +50,7 @@ export default function HowItWorks({ onScrollToSection }: HowItWorksProps) {
             Four Steps to Zero Friction
           </h2>
           <p className="text-brand-slate/75 text-base sm:text-lg">
-            RyOS acts as a direct, text-based software layer. No extensions to install, no API keys to verify, and absolutely zero subscriptions.
+            Ryos acts as a direct, text-based software layer. No extensions to install, no API keys to verify, and absolutely zero subscriptions.
           </p>
         </div>
 

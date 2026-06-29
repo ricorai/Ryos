@@ -17,7 +17,7 @@ export default function PipelineVisualizer() {
     },
     {
       icon: <ShieldCheck className="w-5 h-5" />,
-      title: "RyOS Core",
+      title: "Ryos Core",
       desc: "Enforces reality checks and anti-assumption protocols.",
       color: "bg-indigo-500/10 text-indigo-700 border-indigo-500/20"
     },
@@ -45,10 +45,10 @@ export default function PipelineVisualizer() {
             Structure Over Hype
           </span>
           <h2 className="font-display text-3xl sm:text-4xl font-bold tracking-tight text-brand-slate mb-4">
-            How RyOS Context-Bridges Your Intent
+            How Ryos Context-Bridges Your Intent
           </h2>
           <p className="text-brand-slate/75 text-base sm:text-lg">
-            Instead of building custom software wrappers that lock you into one provider, RyOS works natively within your tool of choice.
+            Instead of building custom software wrappers that lock you into one provider, Ryos works natively within your tool of choice.
           </p>
         </div>
 
