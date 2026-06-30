@@ -8,28 +8,28 @@ interface HowItWorksProps {
 export default function HowItWorks({ onScrollToSection }: HowItWorksProps) {
   const steps = [
     {
-      icon: <Download className="w-5 h-5 text-indigo-600" />,
+      icon: <Download className="w-5 h-5 text-brand-slate/55" />,
       title: "1. Obtain Ryos Core",
       description: "Grab the core specification holding alignment laws and cognitive governance rules. Select copying or save direct.",
       actionText: "Go to Core",
       targetId: "downloads"
     },
     {
-      icon: <FileText className="w-5 h-5 text-indigo-600" />,
+      icon: <FileText className="w-5 h-5 text-brand-slate/55" />,
       title: "2. Load the Template",
       description: "Download the simple YAML/Markdown template mapping out your preferences, context patterns, and boundary parameters.",
       actionText: "Go to Template",
       targetId: "downloads"
     },
     {
-      icon: <ClipboardCopy className="w-5 h-5 text-indigo-600" />,
+      icon: <ClipboardCopy className="w-5 h-5 text-brand-slate/55" />,
       title: "3. Stack with Your Chat",
       description: "Copy both text blocks and paste them directly into the Custom Instructions, System Prompt, or initial prompt of your preferred LLM.",
       actionText: "View Pipeline",
       targetId: "pipeline"
     },
     {
-      icon: <MessageSquare className="w-5 h-5 text-indigo-600" />,
+      icon: <MessageSquare className="w-5 h-5 text-brand-slate/55" />,
       title: "4. Request \"Help me build...\"",
       description: "Prompt the AI: 'Help me build my Ryos configuration'. The model will interview you to construct your personalized workflow parameters.",
       actionText: "Try Experiment",
@@ -63,7 +63,7 @@ export default function HowItWorks({ onScrollToSection }: HowItWorksProps) {
             >
               <div>
                 {/* Visual Step Badge */}
-                <div className="w-10 h-10 rounded-xl bg-indigo-50 border border-indigo-100 flex items-center justify-center mb-6 py-0.5 font-semibold">
+                <div className="w-10 h-10 rounded-xl bg-brand-slate/5 border border-brand-slate/8 flex items-center justify-center mb-6 py-0.5 font-semibold">
                   {step.icon}
                 </div>
 
@@ -79,7 +79,7 @@ export default function HowItWorks({ onScrollToSection }: HowItWorksProps) {
               <div>
                 <button
                   onClick={() => onScrollToSection(step.targetId)}
-                  className="inline-flex items-center gap-1 text-xs font-mono font-bold text-indigo-600 hover:text-indigo-800 transition-colors uppercase tracking-wider cursor-pointer mt-auto"
+                  className="inline-flex items-center gap-1 text-xs font-mono font-bold text-brand-slate/55 hover:text-brand-slate transition-colors uppercase tracking-wider cursor-pointer mt-auto"
                 >
                   <span>{step.actionText}</span>
                   <span>→</span>

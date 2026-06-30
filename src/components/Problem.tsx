@@ -41,7 +41,7 @@ export default function Problem() {
                   >
                     <div className="flex justify-between items-center">
                       <div className="flex items-center gap-3">
-                        <HelpCircle className={`w-4 h-4 shrink-0 ${isActive ? "text-amber-300" : "text-brand-slate/40"}`} />
+                        <HelpCircle className={`w-4 h-4 shrink-0 ${isActive ? "text-brand-beige/60" : "text-brand-slate/40"}`} />
                         <span className="font-display font-semibold text-sm sm:text-base leading-tight">
                           {point.title}
                         </span>
@@ -55,11 +55,11 @@ export default function Problem() {
                     {isActive && (
                       <div className="mt-4 pt-4 border-t border-white/10 md:hidden text-xs space-y-3 block text-brand-beige/90">
                         <p>{point.symptom}</p>
-                        <div className="bg-white/10 p-2.5 rounded-lg text-emerald-300">
+                        <div className="bg-white/10 p-2.5 rounded-lg text-brand-beige/60">
                           <span className="font-bold">Failure Type:</span> {point.failureMode}
                         </div>
-                        <div className="bg-emerald-950/40 p-2.5 rounded-lg border border-emerald-500/10 text-white font-sans">
-                          <span className="font-bold text-emerald-300 block mb-1">✓ The Ryos Solution:</span>
+                        <div className="bg-white/8 p-2.5 rounded-lg border border-white/10 text-white font-sans">
+                          <span className="font-bold text-brand-beige/80 block mb-1">✓ The Ryos Solution:</span>
                           {point.solution}
                         </div>
                       </div>
@@ -74,7 +74,6 @@ export default function Problem() {
           <div className="hidden md:block md:col-span-7 h-full">
             <div className="border border-brand-slate/15 bg-brand-beige/25 rounded-2xl p-8 min-h-[360px] flex flex-col justify-between relative overflow-hidden premium-shadow">
               {/* Corner Accent vector */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-transparent pointer-events-none" />
 
               {activeCardId ? (
                 (() => {
@@ -83,7 +82,7 @@ export default function Problem() {
                     <div className="h-full flex flex-col justify-between space-y-6">
                       <div>
                         {/* Status Label */}
-                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-red-100 text-red-800 text-[11px] font-mono font-semibold uppercase mb-4">
+                        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded bg-brand-slate/8 text-brand-slate/60 text-[11px] font-mono font-semibold uppercase mb-4">
                           <span>Diagnostic: {currentPoint.failureMode}</span>
                         </div>
 
@@ -97,10 +96,10 @@ export default function Problem() {
                       </div>
 
                       <div className="border-t border-brand-slate/8 pt-6">
-                        <div className="flex items-start gap-3 bg-white p-5 rounded-xl border border-emerald-500/10 shadow-sm">
-                          <CheckCircle2 className="w-5 h-5 text-emerald-600 shrink-0 mt-0.5" />
+                        <div className="flex items-start gap-3 bg-white p-5 rounded-xl border border-brand-slate/8 shadow-sm">
+                          <CheckCircle2 className="w-5 h-5 text-brand-slate/50 shrink-0 mt-0.5" />
                           <div>
-                            <span className="font-display font-bold text-emerald-900 text-sm block mb-1">
+                            <span className="font-display font-bold text-brand-slate/75 text-sm block mb-1">
                               How Ryos framework solves this
                             </span>
                             <span className="text-brand-slate/85 text-sm leading-relaxed block font-sans">

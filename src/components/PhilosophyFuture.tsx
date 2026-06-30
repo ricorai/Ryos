@@ -23,21 +23,21 @@ export default function PhilosophyFuture() {
       title: "v8.2 Core Prompt + Template",
       description: "Direct markdown configuration designed to anchor any standard language model workspace.",
       status: "Active",
-      statusColor: "bg-emerald-100 text-emerald-800"
+      statusColor: "bg-brand-slate/8 text-brand-slate/70"
     },
     {
       phase: "Next Phase",
       title: "Interactive Config Generator",
       description: "A step-by-step browser sandbox helping you format and debug custom workflows in real-time.",
       status: "In Development",
-      statusColor: "bg-blue-100 text-blue-800"
+      statusColor: "bg-brand-slate/5 text-brand-slate/55"
     },
     {
       phase: "Future Outlook",
       title: "Platform Integrations & Extensions",
       description: "Automated community templates and direct desktop sync tools to keep your configs aligned across browser surfaces.",
       status: "Planned",
-      statusColor: "bg-purple-100 text-purple-800"
+      statusColor: "bg-brand-slate/4 text-brand-slate/40"
     }
   ];
 

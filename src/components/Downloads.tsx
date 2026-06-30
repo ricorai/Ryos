@@ -96,7 +96,7 @@ export default function Downloads() {
                 id="copy-to-clipboard-btn"
                 className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-white border border-brand-slate/10 hover:border-brand-slate/30 text-brand-slate text-xs font-semibold shadow-xs cursor-pointer active:scale-98 transition-all"
               >
-                {copied ? <Check className="w-3.5 h-3.5 text-emerald-600 animate-scale-up" /> : <Clipboard className="w-3.5 h-3.5" />}
+                {copied ? <Check className="w-3.5 h-3.5 text-brand-slate/60 animate-scale-up" /> : <Clipboard className="w-3.5 h-3.5" />}
                 <span>{copied ? "Copied!" : "Copy Raw Text"}</span>
               </button>
 
@@ -146,10 +146,10 @@ export default function Downloads() {
         </div>
 
         {/* Informative instructions block */}
-        <div className="mt-8 flex items-start gap-3 p-4 sm:p-5 bg-indigo-50/50 border border-indigo-100 rounded-xl">
-          <Info className="w-5 h-5 text-indigo-600 shrink-0 mt-0.5" />
+        <div className="mt-8 flex items-start gap-3 p-4 sm:p-5 bg-brand-slate/3 border border-brand-slate/8 rounded-xl">
+          <Info className="w-5 h-5 text-brand-slate/45 shrink-0 mt-0.5" />
           <div className="text-xs sm:text-sm text-brand-slate/85 font-sans leading-relaxed">
-            <span className="font-bold text-indigo-900 block mb-1">Applying the stack:</span>
+            <span className="font-bold text-brand-slate/75 block mb-1">Applying the stack:</span>
             Paste both files into your AI's system prompt, custom instructions, or context window. That's it. No installation, no extensions. Ryos activates immediately on the next message.
           </div>
         </div>

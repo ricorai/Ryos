@@ -32,7 +32,7 @@ export default function InteractiveDemo() {
         <div className="bg-[#FAF9F6] border border-brand-slate/10 rounded-2xl p-6 sm:p-10 premium-shadow relative overflow-hidden">
           {/* Header */}
           <div className="flex items-center gap-2 mb-6 pb-4 border-b border-brand-slate/6">
-            <Compass className="w-5 h-5 text-indigo-600 animate-spin-slow" />
+            <Compass className="w-5 h-5 text-brand-slate/50 animate-spin-slow" />
             <span className="font-display font-medium text-xs sm:text-sm uppercase tracking-wider text-brand-slate/60">
               Active Thought Experiment
             </span>
@@ -62,7 +62,7 @@ export default function InteractiveDemo() {
                     className="w-full text-left p-4 rounded-xl border border-brand-slate/8 bg-white hover:bg-brand-slate hover:text-brand-beige group transition-all duration-150 cursor-pointer shadow-sm text-sm sm:text-base font-medium flex items-center justify-between"
                   >
                     <span>{option.label}</span>
-                    <span className="text-xs font-mono text-indigo-600 group-hover:text-amber-200 transition-colors shrink-0 pl-3">
+                    <span className="text-xs font-mono text-brand-slate/45 group-hover:text-brand-beige/70 transition-colors shrink-0 pl-3">
                       Select
                     </span>
                   </button>
@@ -76,10 +76,10 @@ export default function InteractiveDemo() {
               transition={{ duration: 0.5 }}
               className="space-y-6"
             >
-              <div className="bg-amber-500/5 border border-amber-500/10 rounded-xl p-4 sm:p-5 flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+              <div className="bg-brand-slate/4 border border-brand-slate/8 rounded-xl p-4 sm:p-5 flex items-start gap-3">
+                <AlertCircle className="w-5 h-5 text-brand-slate/40 shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-bold text-xs uppercase tracking-wider text-amber-800 block mb-1">
+                  <span className="font-bold text-xs uppercase tracking-wider text-brand-slate/55 block mb-1">
                     Your Selection:
                   </span>
                   <span className="text-brand-slate text-sm sm:text-base font-sans">
@@ -120,10 +120,8 @@ export default function InteractiveDemo() {
                 className="mt-8 border-t border-brand-slate/10 pt-8"
               >
                 <div className="bg-brand-slate text-brand-beige p-6 sm:p-8 rounded-2xl relative overflow-hidden">
-                  <div className="absolute top-0 right-0 w-36 h-36 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-amber-500/15 via-transparent to-transparent pointer-events-none" />
-                  
                   <div className="flex items-center gap-2 mb-4">
-                    <Sparkles className="w-4 h-4 text-amber-300" />
+                    <Sparkles className="w-4 h-4 text-brand-beige/40" />
                     <span className="font-mono text-xs uppercase tracking-wider text-brand-beige/55">The Cognitive Principle</span>
                   </div>
 

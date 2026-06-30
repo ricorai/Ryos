@@ -13,7 +13,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
       className="relative min-h-[85vh] flex flex-col items-center justify-center pt-24 px-6 md:px-12 overflow-hidden bg-gradient-to-b from-brand-beige to-white"
     >
       {/* Soft atmospheric gradient behind */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-amber-500/5 via-transparent to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_var(--tw-gradient-stops))] from-brand-slate/3 via-transparent to-transparent pointer-events-none" />
 
       <div className="max-w-4xl mx-auto text-center z-10 flex flex-col items-center">
         {/* Subtle Pill */}
@@ -23,7 +23,7 @@ export default function Hero({ onScrollToSection }: HeroProps) {
           transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-brand-slate/10 bg-brand-slate/5 text-brand-slate mb-8"
         >
-          <Sparkles className="w-3.5 h-3.5 text-amber-600" />
+          <Sparkles className="w-3.5 h-3.5 text-brand-slate/45" />
           <span className="text-xs font-mono tracking-tight font-medium uppercase">V8.2 Core Specification</span>
         </motion.div>
 
@@ -101,19 +101,19 @@ export default function Hero({ onScrollToSection }: HeroProps) {
           <div className="space-y-4 font-mono text-[11px] sm:text-sm text-brand-slate/85">
             <div className="flex gap-4">
               <span className="text-brand-slate/30 shrink-0">01</span>
-              <span><span className="text-emerald-700"># Loaded:</span> Ryos Core Specification v8.2</span>
+              <span><span className="text-brand-slate/45"># Loaded:</span> Ryos Core Specification v8.2</span>
             </div>
             <div className="flex gap-4">
               <span className="text-brand-slate/30 shrink-0">02</span>
-              <span><span className="text-emerald-700"># Personalized Calibration:</span> config.ryos applied successfully.</span>
+              <span><span className="text-brand-slate/45"># Personalized Calibration:</span> config.ryos applied successfully.</span>
             </div>
             <div className="flex gap-4">
               <span className="text-brand-slate/30 shrink-0">03</span>
-              <span>&gt; Calibrating response density: <span className="bg-emerald-50 text-emerald-800 px-1.5 py-0.5 rounded text-[10px] sm:text-xs font-semibold">HIGH-CONCISE</span></span>
+              <span>&gt; Calibrating response density: <span className="bg-brand-slate/8 text-brand-slate/70 px-1.5 py-0.5 rounded text-[10px] sm:text-xs font-semibold">HIGH-CONCISE</span></span>
             </div>
             <div className="flex gap-4">
               <span className="text-brand-slate/30 shrink-0">04</span>
-              <span>&gt; Core operating rule loaded: <span className="text-indigo-600 font-semibold italic">\"Recognize, verify, don't attach, act clean.\"</span></span>
+              <span>&gt; Core operating rule loaded: <span className="text-brand-slate/65 font-semibold italic">\"Recognize, verify, don't attach, act clean.\"</span></span>
             </div>
           </div>
         </motion.div>

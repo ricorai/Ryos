@@ -7,31 +7,31 @@ export default function PipelineVisualizer() {
       icon: <User className="w-5 h-5" />,
       title: "Human",
       desc: "Source of raw intent and ultimate authority.",
-      color: "bg-orange-500/10 text-orange-700 border-orange-500/20"
+      color: "bg-brand-slate/5 text-brand-slate/60 border-brand-slate/10"
     },
     {
       icon: <Settings className="w-5 h-5" />,
       title: "Universal Config",
       desc: "Captures your timezone, priorities, and workflow limits.",
-      color: "bg-blue-500/10 text-blue-700 border-blue-500/20"
+      color: "bg-brand-slate/5 text-brand-slate/60 border-brand-slate/10"
     },
     {
       icon: <ShieldCheck className="w-5 h-5" />,
       title: "Ryos Core",
       desc: "Enforces reality checks and anti-assumption protocols.",
-      color: "bg-indigo-500/10 text-indigo-700 border-indigo-500/20"
+      color: "bg-brand-slate/8 text-brand-slate/70 border-brand-slate/12"
     },
     {
       icon: <Cpu className="w-5 h-5" />,
       title: "Target LLM",
       desc: "Runs clean, un-hedged reasoning aligned with truth.",
-      color: "bg-purple-500/10 text-purple-700 border-purple-500/20"
+      color: "bg-brand-slate/5 text-brand-slate/60 border-brand-slate/10"
     },
     {
       icon: <CheckCircle className="w-5 h-5" />,
       title: "Grounded Flow",
       desc: "Consistent, repeatable, and low-friction output.",
-      color: "bg-emerald-500/10 text-emerald-700 border-emerald-500/20"
+      color: "bg-brand-slate/5 text-brand-slate/60 border-brand-slate/10"
     }
   ];
 
@@ -55,7 +55,7 @@ export default function PipelineVisualizer() {
         {/* Visual Pipeline Layout */}
         <div className="relative">
           {/* Connecting arrow/line background for desktop */}
-          <div className="hidden lg:block absolute top-[43px] left-[5%] right-[5%] h-0.5 bg-gradient-to-r from-orange-400 via-indigo-400 to-emerald-400 opacity-20 -z-10 animate-pulse" />
+          <div className="hidden lg:block absolute top-[43px] left-[5%] right-[5%] h-px bg-gradient-to-r from-transparent via-brand-slate/20 to-transparent -z-10" />
 
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 relative z-10">
             {steps.map((step, idx) => (

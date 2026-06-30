@@ -15,6 +15,7 @@ import PhilosophyFuture from "./components/PhilosophyFuture";
 import Footer from "./components/Footer";
 import Cursor from "./components/Cursor";
 import Marquee from "./components/Marquee";
+import WaterRipple from "./components/WaterRipple";
 
 export default function App() {
   // Simple functional smooth scroll helper
@@ -34,6 +35,7 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-brand-beige text-brand-slate selection:bg-brand-slate selection:text-brand-beige font-sans">
+      <WaterRipple />
       <Cursor />
 
       <Navbar onScrollToSection={handleScrollToSection} />
