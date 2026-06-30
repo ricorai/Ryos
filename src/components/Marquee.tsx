@@ -12,10 +12,10 @@ const DEFAULT_ITEMS = [
   "don't attach",
   "act clean",
   "v8.2",
-  "less friction",
-  "more understanding",
-  "reality gets the final say",
-  "peace",
+  "less overhead",
+  "sharper context",
+  "reality leads",
+  "clarity",
 ];
 
 export default function Marquee({ items = DEFAULT_ITEMS, speed = 30, reverse = false }: MarqueeProps) {

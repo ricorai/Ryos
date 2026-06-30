@@ -21,7 +21,7 @@ export default function Footer() {
           <span className="hidden sm:inline">•</span>
           <span>Reality Gets the Final Say</span>
           <span className="hidden sm:inline">•</span>
-          <span>End Goal: Peace</span>
+          <span>End State: Clarity</span>
         </div>
 
         {/* Simple year tag */}

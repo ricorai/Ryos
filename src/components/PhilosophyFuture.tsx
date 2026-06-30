@@ -12,8 +12,8 @@ export default function PhilosophyFuture() {
       desc: "Systems are calibrated against real measurements, not hypothetical layouts. If observation contradicts the blueprint, rewrite the model."
     },
     {
-      title: "End Goal: Peace",
-      desc: "Success isn't about maximum volume or frantic code features. It is a stable, quiet, low-entropy collaboration environment."
+      title: "End State: Clarity",
+      desc: "Not maximum output. A consistent, low-overhead environment where the right answer surfaces faster."
     }
   ];
 
