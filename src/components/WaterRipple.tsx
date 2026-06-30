@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 interface Ripple {
   x: number;
@@ -10,10 +10,11 @@ const MAX_RADIUS = 80;
 const LIFE = 900;
 
 export default function WaterRipple() {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-
   useEffect(() => {
-    const canvas = canvasRef.current!;
+    const canvas = document.createElement("canvas");
+    canvas.style.cssText = "position:fixed;inset:0;z-index:1;pointer-events:none;";
+    document.body.appendChild(canvas);
+
     const ctx = canvas.getContext("2d")!;
     const ripples: Ripple[] = [];
     let raf: number;
@@ -32,7 +33,6 @@ export default function WaterRipple() {
       lastSpawn = now;
       ripples.push({ x: e.clientX, y: e.clientY, born: now });
     };
-
     window.addEventListener("mousemove", onMove);
 
     const draw = (now: number) => {
@@ -52,20 +52,15 @@ export default function WaterRipple() {
       }
       raf = requestAnimationFrame(draw);
     };
-
     raf = requestAnimationFrame(draw);
 
     return () => {
       window.removeEventListener("mousemove", onMove);
       window.removeEventListener("resize", resize);
       cancelAnimationFrame(raf);
+      document.body.removeChild(canvas);
     };
   }, []);
 
-  return (
-    <canvas
-      ref={canvasRef}
-      style={{ position: "fixed", inset: 0, zIndex: 1, pointerEvents: "none" }}
-    />
-  );
+  return null;
 }

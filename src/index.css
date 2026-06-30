@@ -32,10 +32,10 @@ body::before {
   background-size: 48px 48px;
 }
 
-/* all content above the texture and ripple canvas */
+/* all content above the texture */
 #root {
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
 /* ─── scrollbar ─────────────────────────────────────────── */
