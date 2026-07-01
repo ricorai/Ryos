@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — RyOS</title>
+<meta name="description" content="RyOS Privacy Policy: what information RyOS receives, how it's used, and how third-party providers like OpenAI and Runway fit in.">
+<style>
+  :root {
+    --bg: #f7f6f3;
+    --bg-elevated: #ffffff;
+    --text: #1c1c1a;
+    --text-muted: #5c5c56;
+    --border: #dedad2;
+    --accent: #0f6e63;
+    --accent-soft: #e4efec;
+    --code-bg: #eeece5;
+    --radius: 6px;
+    --max-width: 760px;
+    color-scheme: light;
+  }
+
+  [data-theme="dark"] {
+    --bg: #14140f;
+    --bg-elevated: #1b1b16;
+    --text: #ece9e1;
+    --text-muted: #a3a099;
+    --border: #33322a;
+    --accent: #5fd6c3;
+    --accent-soft: #1e2f2a;
+    --code-bg: #201f19;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  a { color: var(--accent); text-decoration: underline; text-underline-offset: 2px; }
+  a:hover { opacity: 0.8; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  code {
+    font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, monospace;
+    background: var(--code-bg);
+    padding: 0.1em 0.4em;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+
+  /* --- Top bar --- */
+  .topbar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 24px;
+    background: color-mix(in srgb, var(--bg) 88%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  .brand-mark {
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    background: var(--accent);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--bg-elevated);
+    flex-shrink: 0;
+  }
+
+  .theme-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    color: var(--text);
+    border-radius: 999px;
+    padding: 6px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: inherit;
+  }
+
+  .theme-toggle:hover { border-color: var(--accent); }
+
+  /* --- Layout --- */
+  .page {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+
+  header.hero {
+    margin-bottom: 40px;
+  }
+
+  .eyebrow {
+    font-family: monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+
+  h1 {
+    font-size: clamp(28px, 5vw, 38px);
+    line-height: 1.15;
+    margin: 0 0 12px;
+    letter-spacing: -0.01em;
+  }
+
+  .subtitle {
+    color: var(--text-muted);
+    font-size: 16px;
+    max-width: 56ch;
+    margin: 0;
+  }
+
+  .meta-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+    margin-top: 20px;
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: monospace;
+  }
+
+  /* --- TOC --- */
+  nav.toc {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin-bottom: 44px;
+  }
+
+  nav.toc p {
+    margin: 0 0 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    font-family: monospace;
+  }
+
+  nav.toc ol {
+    columns: 2;
+    column-gap: 24px;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 14px;
+  }
+
+  nav.toc li { margin-bottom: 6px; break-inside: avoid; }
+  nav.toc a { text-decoration: none; }
+  nav.toc a:hover { text-decoration: underline; }
+
+  /* --- Content --- */
+  section {
+    padding-top: 36px;
+    margin-top: 36px;
+    border-top: 1px solid var(--border);
+    scroll-margin-top: 76px;
+  }
+
+  section:first-of-type {
+    border-top: none;
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  h2 {
+    font-size: 21px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 0 0 14px;
+    letter-spacing: -0.01em;
+  }
+
+  h2 .num {
+    font-family: monospace;
+    font-size: 13px;
+    color: var(--accent);
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 16px;
+    margin: 20px 0 8px;
+  }
+
+  p { margin: 0 0 14px; color: var(--text); }
+  p.muted { color: var(--text-muted); font-size: 14.5px; }
+
+  ul, ol.content-list {
+    margin: 0 0 14px;
+    padding-left: 22px;
+  }
+  li { margin-bottom: 6px; }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    font-size: 14.5px;
+    margin: 16px 0;
+  }
+  .callout strong { color: var(--text); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14.5px;
+    margin: 12px 0 18px;
+  }
+  th, td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  th {
+    font-family: monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    font-weight: 500;
+  }
+
+  footer.doc-footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-size: 13px;
+    color: var(--text-muted);
+    font-family: monospace;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 20px;
+  }
+
+  .back-to-top {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 40px;
+    font-size: 13px;
+    color: var(--text-muted);
+    text-decoration: none;
+  }
+  .back-to-top:hover { color: var(--accent); }
+
+  @media (max-width: 560px) {
+    nav.toc ol { columns: 1; }
+    .page { padding: 32px 18px 72px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <a href="#top" class="brand">
+    <span class="brand-mark" aria-hidden="true">R</span>
+    RyOS
+  </a>
+  <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle dark mode">
+    <span id="themeIcon" aria-hidden="true">◐</span>
+    <span id="themeLabel">Theme</span>
+  </button>
+</div>
+
+<main class="page" id="top">
+
+  <header class="hero">
+    <p class="eyebrow">Legal · Privacy</p>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">
+      This page explains what information RyOS receives, how it's used, and how the
+      third-party providers RyOS connects to — like OpenAI and Runway — fit into that picture.
+      Plain language, no filler.
+    </p>
+    <div class="meta-row">
+      <span>Last Updated: July 2026</span>
+      <span>Version: 1.0</span>
+      <span>Applies to: RyOS only</span>
+    </div>
+  </header>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#introduction">1. Introduction</a></li>
+      <li><a href="#information-we-receive">2. Information We Receive</a></li>
+      <li><a href="#how-used">3. How Information Is Used</a></li>
+      <li><a href="#third-party">4. Third-Party Services</a></li>
+      <li><a href="#ai-processing">5. AI Processing</a></li>
+      <li><a href="#retention">6. Data Retention</a></li>
+      <li><a href="#security">7. Security</a></li>
+      <li><a href="#responsibilities">8. User Responsibilities</a></li>
+      <li><a href="#rights">9. Your Rights</a></li>
+      <li><a href="#children">10. Children's Privacy</a></li>
+      <li><a href="#changes">11. Changes to This Policy</a></li>
+      <li><a href="#contact">12. Contact Information</a></li>
+    </ol>
+  </nav>
+
+  <section id="introduction">
+    <h2><span class="num">01</span> Introduction</h2>
+    <p>
+      RyOS is an orchestration layer built on OpenAI's Custom GPT platform. It runs as a
+      configured GPT that can, when a request calls for it, use GPT Actions to reach trusted
+      third-party services to complete a task — for example, generating an image or video.
+    </p>
+    <p>
+      This policy describes RyOS's own practices. It does not describe, and cannot override,
+      the privacy practices of OpenAI, Runway, or any other platform or provider you interact
+      with alongside RyOS. Each of those has its own privacy policy, linked where relevant below.
+    </p>
+    <p>
+      By using RyOS, you agree to the practices described here. If you don't agree, the
+      simplest option is to stop using RyOS — there's no account to delete or subscription to
+      cancel on our end beyond whatever access you granted through OpenAI's platform.
+    </p>
+  </section>
+
+  <section id="information-we-receive">
+    <h2><span class="num">02</span> Information We Receive</h2>
+    <p>RyOS receives information in a few distinct ways:</p>
+
+    <h3>What you send in conversation</h3>
+    <p>
+      Messages, instructions, files, images, or other content you submit to RyOS while using
+      it, for the purpose of getting a response or completing a task.
+    </p>
+
+    <h3>What's needed to fulfill a request via Actions</h3>
+    <p>
+      When a request requires an external provider — for instance, asking RyOS to generate a
+      video — the relevant portion of your request (a prompt, an uploaded file reference, or
+      similar) is passed to that provider through a GPT Action, solely to carry out the task.
+    </p>
+
+    <h3>Basic website data</h3>
+    <p>
+      If you visit the RyOS website, standard technical information may be logged by our
+      hosting provider — things like IP address, browser type, and page requests. This is
+      common web server behavior, not something RyOS actively collects or analyzes for
+      profiling.
+    </p>
+
+    <div class="callout">
+      <strong>What RyOS does not do:</strong> RyOS does not run its own account system,
+      payment processor, or advertising network, and does not knowingly collect information
+      beyond what's described above.
+    </div>
+  </section>
+
+  <section id="how-used">
+    <h2><span class="num">03</span> How Information Is Used</h2>
+    <p>Information RyOS receives is used only to:</p>
+    <ul>
+      <li>Understand and respond to your request</li>
+      <li>Route the relevant part of a task to a third-party provider when one is needed to fulfill it</li>
+      <li>Maintain and improve the reliability of RyOS's own behavior and instructions</li>
+      <li>Diagnose problems if something breaks and you report it</li>
+    </ul>
+    <p class="muted">
+      RyOS does not use your information for advertising, does not build behavioral profiles
+      to sell, and does not sell personal information — to third parties or anyone else.
+    </p>
+  </section>
+
+  <section id="third-party">
+    <h2><span class="num">04</span> Third-Party Services</h2>
+    <p>
+      RyOS is built to connect with a small set of trusted providers through GPT Actions. As of
+      this version, that includes:
+    </p>
+    <table>
+      <thead>
+        <tr><th>Provider</th><th>Role</th><th>Their policy</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>OpenAI</td>
+          <td>Hosts the Custom GPT platform RyOS runs on, and processes conversation content as part of that platform</td>
+          <td><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">openai.com/policies/privacy-policy</a></td>
+        </tr>
+        <tr>
+          <td>Runway</td>
+          <td>Generates images or video when a request calls for it, via its API</td>
+          <td><a href="https://runwayml.com/privacy-policy" target="_blank" rel="noopener">runwayml.com/privacy-policy</a></td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      This list is expected to change over time as providers are added, replaced, or removed.
+      We'll keep this section current rather than rewriting the rest of the policy each time —
+      check the "Last Updated" date at the top and bottom of this page for the latest version.
+    </p>
+    <p>
+      Once information is sent to a third-party provider to fulfill your request, that
+      provider's own privacy policy and data practices govern how they handle it. RyOS doesn't
+      control, and isn't responsible for, what happens to data after it leaves our layer and
+      reaches theirs.
+    </p>
+  </section>
+
+  <section id="ai-processing">
+    <h2><span class="num">05</span> AI Processing</h2>
+    <p>
+      RyOS is an AI system. Your requests are processed using OpenAI's underlying models as
+      part of the Custom GPT platform, and, when applicable, by third-party generative AI
+      providers such as Runway.
+    </p>
+    <p>
+      Outputs — text, images, video, or otherwise — are AI-generated and can be inaccurate,
+      incomplete, or unexpected. Review anything RyOS produces before relying on it or sharing
+      it further, especially for decisions that matter.
+    </p>
+    <p>
+      RyOS does not use your conversations to train its own separate models — RyOS doesn't
+      operate model training infrastructure. Whether OpenAI or a connected provider uses
+      interactions for their own model training is governed by their respective policies and
+      settings, not by RyOS.
+    </p>
+  </section>
+
+  <section id="retention">
+    <h2><span class="num">06</span> Data Retention</h2>
+    <p>
+      RyOS does not operate its own database of your conversations. As an orchestration layer
+      running on top of OpenAI's platform, conversation history and retention are primarily
+      governed by OpenAI's own retention settings and policies for the Custom GPT platform.
+    </p>
+    <p>
+      Information passed to a third-party provider through a GPT Action — for example, a
+      prompt sent to Runway to generate a video — is retained according to that provider's own
+      retention policy, not RyOS's.
+    </p>
+    <p>
+      Any website server logs are retained only as long as reasonably needed for security and
+      operational purposes, and are not treated as a long-term record of individual activity.
+    </p>
+  </section>
+
+  <section id="security">
+    <h2><span class="num">07</span> Security</h2>
+    <p>
+      RyOS relies on the security infrastructure of the platforms it's built on — primarily
+      OpenAI's platform, and, for Actions calls, the connected provider's own API security
+      (such as encrypted transport and authenticated requests).
+    </p>
+    <p>
+      We take reasonable, good-faith steps to avoid introducing unnecessary risk in how RyOS is
+      configured and how it routes requests. That said, no system is perfectly secure, and we
+      can't guarantee absolute protection against every possible risk.
+    </p>
+    <div class="callout">
+      <strong>We do not claim compliance with any specific security or privacy certification
+      or framework</strong> (such as SOC 2, ISO 27001, HIPAA, or similar) unless a future
+      version of this policy states otherwise explicitly.
+    </div>
+  </section>
+
+  <section id="responsibilities">
+    <h2><span class="num">08</span> User Responsibilities</h2>
+    <p>Using RyOS responsibly means:</p>
+    <ul>
+      <li>Avoiding submission of sensitive personal information (financial account numbers, government IDs, health records, and similar) unless it's genuinely necessary for the task at hand</li>
+      <li>Understanding that anything you submit may be routed to a third-party provider to complete your request, and reviewing their policies if that matters to you</li>
+      <li>Complying with OpenAI's usage policies and any connected provider's terms of service when using RyOS</li>
+      <li>Not using RyOS to generate content that violates the law or the terms of the platforms involved</li>
+    </ul>
+    <p class="muted">
+      You're free to stop using RyOS at any time, for any reason, with no process required on
+      our end.
+    </p>
+  </section>
+
+  <section id="rights">
+    <h2><span class="num">09</span> Your Rights</h2>
+    <p>
+      Depending on where you're located, you may have rights around information collected
+      about you — for example, the right to know what's held, request deletion, or object to
+      certain processing. This policy doesn't assert a specific set of rights under any
+      particular law, since RyOS is used across many jurisdictions.
+    </p>
+    <p>
+      For information processed by RyOS's own website (such as server logs), contact us using
+      the details in <a href="#contact">Section 12</a>.
+    </p>
+    <p>
+      For information processed by OpenAI or a connected provider like Runway once it's been
+      sent to them, you'll need to use their own tools and channels — RyOS doesn't have access
+      to, or control over, data once it's in their systems.
+    </p>
+  </section>
+
+  <section id="children">
+    <h2><span class="num">10</span> Children's Privacy</h2>
+    <p>
+      RyOS is not directed at children and is not intended for use by anyone under the age of
+      13 (or the minimum age required by your local law to use OpenAI's platform, if higher).
+      We don't knowingly collect information from children. If you believe a child has used
+      RyOS and provided information as a result, contact us and we'll take reasonable steps to
+      address it within the scope of what RyOS controls.
+    </p>
+  </section>
+
+  <section id="changes">
+    <h2><span class="num">11</span> Changes to This Policy</h2>
+    <p>
+      We may update this policy as RyOS changes — for example, when a new third-party provider
+      is added. When we do, we'll update the "Last Updated" date and version number at the top
+      and bottom of this page. Material changes will be reflected clearly in the document
+      itself rather than buried in fine print.
+    </p>
+    <p>
+      Continuing to use RyOS after an update means you accept the revised policy. If you don't
+      agree with a change, stop using RyOS.
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2><span class="num">12</span> Contact Information</h2>
+    <p>
+      Questions about this policy, or about how RyOS handles information, can be sent to:
+    </p>
+    <p><code>ricryan2023@gmaiil.com</code></p>
+    <p class="muted">
+      Replace this address with your actual contact channel before publishing — it's a
+      placeholder.
+    </p>
+  </section>
+
+  <a href="#top" class="back-to-top">↑ Back to top</a>
+
+  <footer class="doc-footer">
+    <span>Last Updated: July 2026</span>
+    <span>Version: 1.0</span>
+    <span>© RyOS</span>
+  </footer>
+
+</main>
+
+<script>
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('themeToggle');
+    var icon = document.getElementById('themeIcon');
+    var label = document.getElementById('themeLabel');
+    var stored = null;
+    try { stored = localStorage.getItem('ryos-theme'); } catch (e) {}
+
+    var prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = stored || (prefersDark ? 'dark' : 'light');
+    applyTheme(theme);
+
+    btn.addEventListener('click', function () {
+      theme = theme === 'dark' ? 'light' : 'dark';
+      applyTheme(theme);
+      try { localStorage.setItem('ryos-theme', theme); } catch (e) {}
+    });
+
+    function applyTheme(t) {
+      if (t === 'dark') {
+        root.setAttribute('data-theme', 'dark');
+        icon.textContent = '●';
+        label.textContent = 'Dark';
+      } else {
+        root.removeAttribute('data-theme');
+        icon.textContent = '◐';
+        label.textContent = 'Light';
+      }
+    }
+  })();
+</script>
+
+</body>
+</html>
