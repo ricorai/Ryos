@@ -3,15 +3,16 @@ import { Compass, FileCode2 } from "lucide-react";
 
 interface NavbarProps {
   onScrollToSection: (sectionId: string) => void;
+  onNavigateToPath: (path: "/" | "/privacy") => void;
 }
 
-export default function Navbar({ onScrollToSection }: NavbarProps) {
+export default function Navbar({ onScrollToSection, onNavigateToPath }: NavbarProps) {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FAF9F6]/85 backdrop-blur-md border-b border-brand-slate/5 transition-all duration-200">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
 		<button 
-		  onClick={() => onScrollToSection("hero")}
+		  onClick={() => onNavigateToPath("/")}
 		  className="flex items-center gap-1 font-display text-lg font-bold tracking-tight text-brand-slate hover:opacity-85 transition-opacity"
 		>
 		  <div className="w-6 h-6 rounded-md bg-brand-slate flex items-center justify-center text-brand-beige font-mono text-sm leading-none font-extrabold">
@@ -51,6 +52,17 @@ export default function Navbar({ onScrollToSection }: NavbarProps) {
             <FileCode2 className="w-3.5 h-3.5" />
             <span>Files</span>
           </button>
+
+          <a
+            href={`${import.meta.env.BASE_URL}privacy`}
+            onClick={(event) => {
+              event.preventDefault();
+              onNavigateToPath("/privacy");
+            }}
+            className="text-brand-slate/60 hover:text-brand-slate transition-colors hidden sm:inline-block"
+          >
+            Privacy
+          </a>
         </div>
 
         {/* Action Button */}

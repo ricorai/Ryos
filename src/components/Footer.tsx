@@ -1,6 +1,10 @@
 import React from "react";
 
-export default function Footer() {
+interface FooterProps {
+  onNavigateToPath: (path: "/" | "/privacy") => void;
+}
+
+export default function Footer({ onNavigateToPath }: FooterProps) {
   return (
     <footer className="py-12 px-6 md:px-12 bg-white text-brand-slate/60 border-t border-brand-slate/5 text-sm font-sans">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
@@ -27,6 +31,16 @@ export default function Footer() {
         {/* Simple year tag */}
         <div className="text-xs text-brand-slate/35 text-center">
           &copy; {new Date().getFullYear()} Ryos Specification team. Open source.
+          <a
+            href={`${import.meta.env.BASE_URL}privacy`}
+            onClick={(event) => {
+              event.preventDefault();
+              onNavigateToPath("/privacy");
+            }}
+            className="ml-3 text-brand-slate/45 hover:text-brand-slate transition-colors"
+          >
+            Privacy
+          </a>
         </div>
 
       </div>
