@@ -1,24 +1,32 @@
-<<<<<<< HEAD
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
-
-# Run and deploy your AI Studio app
-
-This contains everything you need to run your app locally.
-
-View your app in AI Studio: https://ai.studio/apps/5c07c589-c99d-46f9-861a-8e36a3ae535e
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
-=======
 # Ryos
->>>>>>> 93a94fc616d17eb9ae3e902e89056c39d7bb9c85
+
+A human-AI collaboration framework — a text specification that teaches any AI chat interface how you think, work, and want answers. No plugins, no subscriptions, no API keys. Just paste text.
+
+- **Website:** [ryos.dev](https://ryos.dev)
+- **Stack:** React 19 · TypeScript · Vite 6 · Tailwind CSS 4 · Motion
+- **Deployment:** GitHub Pages (`/Ryos/`)
+
+---
+
+## Quick Start
+
+```bash
+npm install
+npm run dev      # → localhost:3000
+npm run build    # → dist/
+```
+
+## Project Map
+
+| Folder | Purpose |
+|---|---|
+| `src/` | React app source (components, data, styles) |
+| `scripts/` | Build and utility scripts |
+| `docs/` | Project documentation and reference materials |
+| `Ryos Kit/` | Portable workflow kit — copy into any project for AI context |
+| `dist/` | Production build output (gitignored) |
+| `Architecture.md` | Full project map — human overview + machine reference |
+
+## Architecture
+
+Read [`Architecture.md`](Architecture.md) for the complete project map — every component, data flow, design token, and build step.

@@ -17,9 +17,11 @@ body {
   color: var(--color-brand-slate);
   font-family: var(--font-sans);
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* subtle grid texture — matches Reckon House aesthetic */
+/* subtle grid texture */
 body::before {
   content: '';
   position: fixed;
@@ -27,8 +29,8 @@ body::before {
   z-index: 0;
   pointer-events: none;
   background-image:
-    linear-gradient(rgba(24, 24, 27, 0.045) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(24, 24, 27, 0.045) 1px, transparent 1px);
+    linear-gradient(rgba(24, 24, 27, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 24, 27, 0.04) 1px, transparent 1px);
   background-size: 48px 48px;
 }
 
@@ -47,51 +49,6 @@ body::before {
 /* ─── shadows ───────────────────────────────────────────── */
 .premium-shadow {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02), 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-.premium-border { border-color: rgba(24, 24, 27, 0.08); }
-
-/* ─── custom cursor (desktop / pointer devices only) ────── */
-@media (hover: hover) and (pointer: fine) {
-  * { cursor: none !important; }
-
-  .rc-dot {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 6px;
-    height: 6px;
-    background: var(--color-brand-slate);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9999;
-    will-change: transform;
-    transition: opacity 0.2s;
-  }
-
-  .rc-ring {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 32px;
-    height: 32px;
-    border: 1.5px solid rgba(24, 24, 27, 0.28);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 9998;
-    will-change: transform;
-    transition: width 0.18s ease, height 0.18s ease, border-color 0.18s ease;
-  }
-
-  .rc-ring.rc-hover {
-    width: 46px;
-    height: 46px;
-    border-color: rgba(24, 24, 27, 0.55);
-  }
-}
-
-/* hide cursor elements on touch */
-@media (hover: none), (pointer: coarse) {
-  .rc-dot, .rc-ring { display: none; }
 }
 
 /* ─── marquee ───────────────────────────────────────────── */

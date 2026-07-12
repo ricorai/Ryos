@@ -6,3 +6,13 @@ coverage/
 *.log
 .env*
 !.env.example
+
+# Ryos session/framework files — local context only, not for publish
+Ryos */
+DRyos.txt
+*.ryos
+
+# Workflow kit — transferable context pack
+# This workspace is a test/design site. The kit is designed to travel.
+Ryos Kit/
+

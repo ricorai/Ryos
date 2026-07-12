@@ -6,16 +6,14 @@
 import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import WhatIsRyos from "./components/WhatIsRyos";
 import Problem from "./components/Problem";
-import PipelineVisualizer from "./components/PipelineVisualizer";
-import InteractiveDemo from "./components/InteractiveDemo";
-import HowItWorks from "./components/HowItWorks";
-import Downloads from "./components/Downloads";
+import BeforeAfterDemo from "./components/BeforeAfterDemo";
+import HowToUse from "./components/HowItWorks";
+import AdvancedUsage from "./components/AdvancedUsage";
 import PhilosophyFuture from "./components/PhilosophyFuture";
+import Downloads from "./components/Downloads";
 import Footer from "./components/Footer";
-import Cursor from "./components/Cursor";
-import Marquee from "./components/Marquee";
-import WaterRipple from "./components/WaterRipple";
 import Privacy from "./components/Privacy";
 
 type Route = "home" | "privacy";
@@ -61,7 +59,7 @@ export default function App() {
   const scrollToSection = (sectionId: string) => {
     const targetElement = document.getElementById(sectionId);
     if (targetElement) {
-      const navbarOffset = 70; // rough height of navbar
+      const navbarOffset = 70;
       const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - navbarOffset;
 
@@ -72,7 +70,6 @@ export default function App() {
     }
   };
 
-  // Simple functional smooth scroll helper
   const handleScrollToSection = (sectionId: string) => {
     if (route !== "home") {
       window.history.pushState(null, "", `${basePath}/#${sectionId}`);
@@ -86,37 +83,31 @@ export default function App() {
 
   return (
     <div className="relative min-h-screen bg-brand-beige text-brand-slate selection:bg-brand-slate selection:text-brand-beige font-sans">
-      <WaterRipple />
-      <Cursor />
-
       <Navbar onScrollToSection={handleScrollToSection} onNavigateToPath={navigateToPath} />
 
       {route === "home" ? (
         <main className="relative">
           <Hero onScrollToSection={handleScrollToSection} />
 
-          <Marquee />
+          <WhatIsRyos />
 
           <Problem />
 
-          <PipelineVisualizer />
+          <BeforeAfterDemo />
 
-          <Marquee reverse speed={40} />
+          <HowToUse onScrollToSection={handleScrollToSection} />
 
-          <InteractiveDemo />
-
-          <HowItWorks onScrollToSection={handleScrollToSection} />
-
-          <Downloads />
+          <AdvancedUsage />
 
           <PhilosophyFuture />
+
+          <Downloads />
         </main>
       ) : (
         <Privacy />
       )}
 
       <Footer onNavigateToPath={navigateToPath} />
-
     </div>
   );
 }

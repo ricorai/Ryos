@@ -11,38 +11,45 @@ export default function Navbar({ onScrollToSection, onNavigateToPath }: NavbarPr
     <nav className="fixed top-0 left-0 right-0 z-50 bg-[#FAF9F6]/85 backdrop-blur-md border-b border-brand-slate/5 transition-all duration-200">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         {/* Logo */}
-		<button 
-		  onClick={() => onNavigateToPath("/")}
-		  className="flex items-center gap-1 font-display text-lg font-bold tracking-tight text-brand-slate hover:opacity-85 transition-opacity"
-		>
-		  <div className="w-6 h-6 rounded-md bg-brand-slate flex items-center justify-center text-brand-beige font-mono text-sm leading-none font-extrabold">
-			R
-		  </div>
-		  <span>yos</span>
-		</button>
+        <button 
+          onClick={() => onNavigateToPath("/")}
+          className="flex items-center gap-1 font-display text-lg font-bold tracking-tight text-brand-slate hover:opacity-85 transition-opacity"
+        >
+          <div className="w-6 h-6 rounded-md bg-brand-slate flex items-center justify-center text-brand-beige font-mono text-sm leading-none font-extrabold">
+            R
+          </div>
+          <span>yos</span>
+        </button>
 
         {/* Navigation links */}
         <div className="flex items-center gap-6 text-sm font-medium">
           <button 
-            onClick={() => onScrollToSection("problem")}
-            className="text-brand-slate/60 hover:text-brand-slate transition-colors"
+            onClick={() => onScrollToSection("what-is-ryos")}
+            className="text-brand-slate/60 hover:text-brand-slate transition-colors hidden md:inline-block"
           >
-            The Failure Modes
-          </button>
-          
-          <button 
-            onClick={() => onScrollToSection("how-it-works")}
-            className="text-brand-slate/60 hover:text-brand-slate transition-colors hidden sm:inline-block"
-          >
-            How It Works
+            What It Is
           </button>
 
           <button 
-            onClick={() => onScrollToSection("interactive-demo")}
+            onClick={() => onScrollToSection("problem")}
+            className="text-brand-slate/60 hover:text-brand-slate transition-colors"
+          >
+            Why It Exists
+          </button>
+          
+          <button 
+            onClick={() => onScrollToSection("demo")}
             className="text-brand-slate/60 hover:text-brand-slate transition-colors flex items-center gap-1.5"
           >
             <Compass className="w-3.5 h-3.5" />
-            <span>Interactive Demo</span>
+            <span>Demo</span>
+          </button>
+
+          <button 
+            onClick={() => onScrollToSection("how-to-use")}
+            className="text-brand-slate/60 hover:text-brand-slate transition-colors hidden sm:inline-block"
+          >
+            How to Use
           </button>
 
           <button 
@@ -50,7 +57,7 @@ export default function Navbar({ onScrollToSection, onNavigateToPath }: NavbarPr
             className="text-brand-slate/60 hover:text-brand-slate transition-colors flex items-center gap-1.5"
           >
             <FileCode2 className="w-3.5 h-3.5" />
-            <span>Files</span>
+            <span>Download</span>
           </button>
 
           <a
@@ -72,7 +79,7 @@ export default function Navbar({ onScrollToSection, onNavigateToPath }: NavbarPr
             id="nav-get-started"
             className="inline-flex items-center justify-center px-4 py-1.5 rounded-full bg-brand-slate hover:bg-brand-slate/90 text-brand-beige text-xs font-semibold tracking-tight transition-all"
           >
-            Get Core
+            Get Ryos
           </button>
         </div>
       </div>

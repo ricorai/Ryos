@@ -11,3 +11,20 @@ export interface VariableScenarioOption {
   label: string;
   unseenVariables: string[];
 }
+
+export interface BeforeAfterExample {
+  id: string;
+  scenario: string;
+  userContext: string;
+  prompt: string;
+  withoutRyos: {
+    label: string;
+    response: string;
+    problems: string[];
+  };
+  withRyos: {
+    label: string;
+    response: string;
+    improvements: string[];
+  };
+}
