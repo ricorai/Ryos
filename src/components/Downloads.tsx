@@ -4,12 +4,20 @@ import { RYOS_CORE_PROMPT, RYOS_CONFIG_TEMPLATE } from "../data/ryosData";
 import { FileCode, Clipboard, Check, Download, Info, ArrowRight, Sparkles } from "lucide-react";
 
 export default function Downloads() {
-  const [activeTab, setActiveTab] = useState<"core" | "template">("template");
+  const [activeTab, setActiveTab] = useState<"core" | "config" | "both">("core");
   const [copied, setCopied] = useState(false);
 
-  const activeContent = activeTab === "core" ? RYOS_CORE_PROMPT : RYOS_CONFIG_TEMPLATE;
-  const activeFileName = activeTab === "core" ? "ryos-core.md" : "ryos-config-template.md";
-  const activeTitle = activeTab === "core" ? "Ryos Core" : "Settings Template";
+  const activeContent = activeTab === "core" 
+    ? RYOS_CORE_PROMPT 
+    : activeTab === "config" 
+      ? RYOS_CONFIG_TEMPLATE 
+      : RYOS_CORE_PROMPT + "\n\n" + RYOS_CONFIG_TEMPLATE;
+      
+  const activeFileName = activeTab === "core" 
+    ? "ryos-core.md" 
+    : activeTab === "config" 
+      ? "ryos-config.md" 
+      : "ryos.md";
 
   const handleCopy = async () => {
     try {
@@ -70,7 +78,7 @@ export default function Downloads() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-brand-slate/45 text-base leading-relaxed max-w-lg mx-auto"
           >
-            Ryos is a single text file with two sections. The Core stays constant — it teaches the AI how to collaborate. Your Settings are personal — they teach the AI about you. Settings are optional. Ryos works either way.
+            Ryos is a single text file with two sections. The Core stays constant — it teaches the AI how to collaborate. Your Config is personal — it teaches the AI about you. Config is optional. Ryos works either way.
           </motion.p>
         </div>
 
@@ -89,30 +97,41 @@ export default function Downloads() {
             <div>
               <h3 className="font-display font-bold text-brand-slate text-lg mb-1">How it works</h3>
               <p className="text-brand-slate/50 text-sm leading-relaxed">
-                Download the file. Paste it into your AI's custom instructions. If your Settings section is empty, the AI will offer a short onboarding interview — answer the questions or skip them. Ryos works immediately either way.
+                Download the file. Paste it into your AI's custom instructions. If your Config section is empty, the AI will offer a short onboarding interview — answer the questions or skip them. Ryos works immediately either way.
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <button
               onClick={() => setActiveTab("core")}
               className="flex items-center gap-3 p-4 rounded-xl border border-brand-slate/8 bg-[#FAF9F6] hover:bg-white hover:border-brand-slate/15 transition-all text-left group cursor-pointer"
             >
               <FileCode className="w-5 h-5 text-brand-slate/40 group-hover:text-brand-slate/60 shrink-0" />
               <div>
-                <span className="font-display font-semibold text-sm text-brand-slate block">The Core</span>
+                <span className="font-display font-semibold text-sm text-brand-slate block">Core</span>
                 <span className="text-xs text-brand-slate/45">Instructions your AI follows</span>
               </div>
               <ArrowRight className="w-3.5 h-3.5 text-brand-slate/25 group-hover:text-brand-slate/45 ml-auto shrink-0" />
             </button>
             <button
-              onClick={() => setActiveTab("template")}
+              onClick={() => setActiveTab("config")}
               className="flex items-center gap-3 p-4 rounded-xl border border-brand-slate/8 bg-[#FAF9F6] hover:bg-white hover:border-brand-slate/15 transition-all text-left group cursor-pointer"
             >
               <FileCode className="w-5 h-5 text-brand-slate/40 group-hover:text-brand-slate/60 shrink-0" />
               <div>
-                <span className="font-display font-semibold text-sm text-brand-slate block">Your Settings</span>
+                <span className="font-display font-semibold text-sm text-brand-slate block">Config</span>
                 <span className="text-xs text-brand-slate/45">Personal preferences (optional)</span>
+              </div>
+              <ArrowRight className="w-3.5 h-3.5 text-brand-slate/25 group-hover:text-brand-slate/45 ml-auto shrink-0" />
+            </button>
+            <button
+              onClick={() => setActiveTab("both")}
+              className="flex items-center gap-3 p-4 rounded-xl border border-brand-slate/8 bg-[#FAF9F6] hover:bg-white hover:border-brand-slate/15 transition-all text-left group cursor-pointer"
+            >
+              <FileCode className="w-5 h-5 text-brand-slate/40 group-hover:text-brand-slate/60 shrink-0" />
+              <div>
+                <span className="font-display font-semibold text-sm text-brand-slate block">Core + Config</span>
+                <span className="text-xs text-brand-slate/45">The complete file</span>
               </div>
               <ArrowRight className="w-3.5 h-3.5 text-brand-slate/25 group-hover:text-brand-slate/45 ml-auto shrink-0" />
             </button>
@@ -131,16 +150,6 @@ export default function Downloads() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between p-4 bg-[#FAF9F6] border-b border-brand-slate/6 gap-4">
             <div className="flex bg-brand-slate/4 p-1 rounded-lg self-start">
               <button
-                onClick={() => { setActiveTab("template"); setCopied(false); }}
-                className={`px-4 py-2 rounded-md font-display text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
-                  activeTab === "template"
-                    ? "bg-white text-brand-slate shadow-xs"
-                    : "text-brand-slate/50 hover:text-brand-slate/70"
-                }`}
-              >
-                Your Settings
-              </button>
-              <button
                 onClick={() => { setActiveTab("core"); setCopied(false); }}
                 className={`px-4 py-2 rounded-md font-display text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
                   activeTab === "core"
@@ -148,7 +157,27 @@ export default function Downloads() {
                     : "text-brand-slate/50 hover:text-brand-slate/70"
                 }`}
               >
-                The Core
+                Core
+              </button>
+              <button
+                onClick={() => { setActiveTab("config"); setCopied(false); }}
+                className={`px-4 py-2 rounded-md font-display text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                  activeTab === "config"
+                    ? "bg-white text-brand-slate shadow-xs"
+                    : "text-brand-slate/50 hover:text-brand-slate/70"
+                }`}
+              >
+                Config
+              </button>
+              <button
+                onClick={() => { setActiveTab("both"); setCopied(false); }}
+                className={`px-4 py-2 rounded-md font-display text-xs sm:text-sm font-semibold transition-all cursor-pointer ${
+                  activeTab === "both"
+                    ? "bg-white text-brand-slate shadow-xs"
+                    : "text-brand-slate/50 hover:text-brand-slate/70"
+                }`}
+              >
+                Core + Config
               </button>
             </div>
 
@@ -208,7 +237,7 @@ export default function Downloads() {
           <Info className="w-5 h-5 text-brand-slate/40 shrink-0 mt-0.5" />
           <div className="text-xs sm:text-sm text-brand-slate/65 font-sans leading-relaxed">
             <span className="font-bold text-brand-slate/70 block mb-1">How to use this file:</span>
-            Download and paste into your AI's custom instructions or settings area. That's it. If your Settings are empty, the AI will offer to help you fill them in. You can skip that and come back anytime.
+            Download and paste into your AI's custom instructions. That's it. If your Config is empty, the AI will offer to help you fill it in. You can skip that and come back anytime.
           </div>
         </motion.div>
       </div>

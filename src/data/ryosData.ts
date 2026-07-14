@@ -28,6 +28,20 @@ export const PAIN_POINTS: PainPoint[] = [
     symptom: "Every time you open a new thread, you have to re-explain who you are, what styles you dislike, and what standard schemas you use.",
     failureMode: "Siloed Memory Loss",
     solution: "Paste Ryos once. Every new conversation starts with your preferences already loaded. No re-explaining who you are or how you work."
+  },
+  {
+    id: "overexplains",
+    title: "AI over-explains simple questions",
+    symptom: "You ask a yes-or-no question and get a five-paragraph essay. The AI can't read when you just want a direct answer.",
+    failureMode: "Density Mismatch",
+    solution: "Ryos lets you set your preferred response density — from minimal one-liners to full deep-dives. The AI matches your pace, not its default verbosity."
+  },
+  {
+    id: "confident-wrong",
+    title: "AI is confidently wrong",
+    symptom: "The AI presents incorrect information with total certainty — wrong dates, made-up APIs, fabricated quotes. You have to verify everything.",
+    failureMode: "Confidence Drift",
+    solution: "Ryos instructs the AI to label its confidence level on every factual claim. When it's unsure, it says so. When it's guessing, it tells you."
   }
 ];
 
