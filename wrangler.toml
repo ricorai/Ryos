@@ -1,0 +1,8 @@
+name = "ryoscore-worker"
+main = "worker.js"
+compatibility_date = "2026-10-24"
+
+routes = [
+  { pattern = "ryoscore.xyz", custom_domain = true },
+  { pattern = "www.ryoscore.xyz", custom_domain = true }
+]
